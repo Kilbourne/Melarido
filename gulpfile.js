@@ -3,7 +3,7 @@ var argv         = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 var changed      = require('gulp-changed');
-var concat       = require('gulp-concat');
+var concat       = require('gulp-concat-util');
 var flatten      = require('gulp-flatten');
 var gulp         = require('gulp');
 var gulpif       = require('gulp-if');
@@ -19,6 +19,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var replace      = require('gulp-replace');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -236,6 +237,19 @@ gulp.task('jshint', function() {
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
 
+// ### Custom tasks
+// Take all the fontcss stylesheets and concat them into a single SCSS file
+gulp.task ('font-css', function() {
+  return gulp.src([path.source + 'fonts/**/stylesheet.css']) //Gather up all the 'stylesheet.css' files
+     .pipe(concat('_fonts.scss')) //Concat them all into a single file
+     .pipe(concat.header('/* !!! WARNING !!! \nThis file is auto-generated. \nDo not edit it or else you will lose changes next time you compile! */\n\n'))
+     .pipe(replace("url('", "url('../fonts/"))
+     .pipe(gulp.dest(path.source + ['styles/components'])); // Put them in the assets/styles/components folder
+});
+
+// Remove the font-face SCSS file if a cleanup is run
+gulp.task('clean-font-css', require('del').bind(null, [path.source + 'styles/components/_fonts.scss']));
+
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
 gulp.task('clean', require('del').bind(null, [path.dist]));
@@ -255,6 +269,7 @@ gulp.task('watch', function() {
       blacklist: ['/wp-admin/**']
     }
   });
+  gulp.watch([path.source + 'fonts/**/stylesheet.css'], ['font-css']);
   gulp.watch([path.source + 'styles/**/*'], ['styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
@@ -266,7 +281,9 @@ gulp.task('watch', function() {
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
-  runSequence('styles',
+  runSequence(
+              'font-css',
+              'styles',
               'scripts',
               ['fonts', 'images'],
               callback);
@@ -287,6 +304,6 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clean', 'clean-font-css'], function() {
   gulp.start('build');
 });

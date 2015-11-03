@@ -7,30 +7,51 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.5"
+    "bootstrap-sass": "3.3.5",
+    "inuit-defaults": "latest",
+    "inuit-responsive-settings": "latest",
+
+    "inuit-functions": "latest",
+    "inuit-mixins": "latest",
+    "inuit-responsive-tools": "latest",
+    "inuit-tools-widths": "latest",
+
+    "inuit-normalize.css": "latest",
+    "inuit-box-sizing": "latest",
+    "inuit-reset": "latest",
+    "inuit-shared": "latest",
+
+    "inuit-headings": "latest",
+    "inuit-paragraphs": "latest",
+    "inuit-lists": "latest",
+    "inuit-images": "latest",
+    "inuit-page": "latest",
+
+    "inuit-block": "latest",
+    "inuit-box": "latest",
+    "inuit-buttons": "latest",
+    "inuit-flag": "latest",
+    "inuit-layout": "latest",
+    "inuit-list-bare": "latest",
+    "inuit-list-block": "latest",
+    "inuit-list-inline": "latest",
+    "inuit-list-ui": "latest",
+    "inuit-media": "latest",
+    "inuit-pack": "latest",
+    "inuit-tables": "latest",
+    "inuit-tabs": "latest",
+
+    "inuit-clearfix": "latest",
+    "inuit-headings-trumps": "latest",
+    "inuit-print": "latest",
+    "inuit-spacing": "latest",
+    "inuit-spacing-responsive": "latest",
+    "inuit-widths": "latest",
+    "inuit-widths-responsive": "latest"
   },
   "overrides": {
     "bootstrap-sass": {
-      "main": [
-        "./assets/stylesheets/_bootstrap.scss",
-        "./assets/javascripts/bootstrap/transition.js",
-        "./assets/javascripts/bootstrap/alert.js",
-        "./assets/javascripts/bootstrap/button.js",
-        "./assets/javascripts/bootstrap/carousel.js",
-        "./assets/javascripts/bootstrap/collapse.js",
-        "./assets/javascripts/bootstrap/dropdown.js",
-        "./assets/javascripts/bootstrap/modal.js",
-        "./assets/javascripts/bootstrap/tooltip.js",
-        "./assets/javascripts/bootstrap/popover.js",
-        "./assets/javascripts/bootstrap/scrollspy.js",
-        "./assets/javascripts/bootstrap/tab.js",
-        "./assets/javascripts/bootstrap/affix.js",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
-      ]
+      "main": []
     }
   }
 }

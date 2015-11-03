@@ -1,6 +1,8 @@
 <header class="banner">
+
+  <a class="brand" href="<?= esc_url(home_url('/')); ?>"></a>
   <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+    <p>Lo <span class="red">Spettacolo</span> non è mai stato <span class="red">così bello</span>!</p>
     <nav class="nav-primary">
       <?php
       if (has_nav_menu('primary_navigation')) :

@@ -1,0 +1,20 @@
+.banner{
+  & >.container {
+    display: inline-block;
+    vertical-align: top;
+    &>p{
+      font-size: 44px;
+      color: rgb(103, 103, 103);
+    }
+  }
+  &::after {
+    background-image: url("../images/striscia1.png");
+    width:100%;
+  }
+}
+.brand{
+  background-image: url("../images/logo.png");
+  display: inline-block;
+  width: 350px;
+  height: 218px;
+}
