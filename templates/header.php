@@ -2,13 +2,15 @@
   <div class="header-wrapper">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"></a>
     <div class="container">
-      <p>Lo <span class="red">Spettacolo</span> non è mai stato <span class="red">così bello</span>!</p>
+      <p class="claim" >Lo <span class="red">Spettacolo</span> non è mai stato <span class="red">così bello</span>!</p>
       <nav class="nav-primary">
-        <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-        endif;
-        ?>
+        <ul class="list-inline">
+          <li class="active">Chi Siamo</li>
+          <li>Artisti</li>
+          <li>Servizi</li>
+          <li>Eventi</li>
+          <li>Contatti</li>
+        </ul>
       </nav>
     </div>
   </div>

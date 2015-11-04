@@ -4,6 +4,10 @@
 .text-center{
   text-align:center;
 }
+.text-moved{
+  margin-left: 32px;
+  display: block;
+}
 .page-wrapper{
   border-top: 4px solid #BE0411;
   padding:0;
@@ -12,7 +16,7 @@
   width:100%;
 }
 .header-wrapper{
-   padding: 20px 6%;
+   padding: 20px 6% 0;
    & >.container {
     display: inline-block;
     vertical-align: top;
@@ -20,6 +24,21 @@
       font-size: 44px;
       color: rgb(103, 103, 103);
       transform: rotate(-2deg);
+    }
+    &>nav{
+      font-family: "open_sansbold";
+      margin-top: 2.75rem;
+      font-size: 1.1rem;
+      text-align: center;
+      color:#666666;
+      line-height: 1;
+      li{
+        padding: 0px 1.5%;
+        &.active{
+          color:#AF3233;
+        }
+      }
+      li:not(:last-child) { border-right: 2px solid #666666; }
     }
   }
 }
@@ -41,6 +60,7 @@
   }
 .striscia1::after {
     background-image: url("../images/striscia1.png");
+    margin-top: -45px;
 }
 .striscia2::after {
     background-image: url("../images/striscia-2.png");
@@ -55,11 +75,16 @@
 }
 .radio-show{
   margin-bottom: 10px;
-  &>div{vertical-align: top;margin-top: 30px;
+  &>div{vertical-align: top;margin-top: 40px;
   }
   .img-container{margin-top: -76px;}
   .left>img{ display:block; margin:0 auto}
-  .kisskiss{margin: 15px auto;max-width:67%;}
+  .left>.kisskiss{margin: 20px auto;max-width:45%;}
+  p{
+    font-size: 1.3rem;
+    line-height: 1;
+    color: rgb(102, 102, 102);
+  }
 }
 
 .chi-siamo{
@@ -67,55 +92,101 @@ background-image: url("../images/chisi.png");
 background-size: 100% auto;
 background-repeat: no-repeat;
 width: 100%;
-min-height: 446px;
+min-height: 464px;
 position: relative;
 }
 .servizi{
   display: inline-block;
   margin-top: -56px;
+  color:#fff;
+  & h3{
+    font-family: "open_sansbold";
+  }
+}
+.servizio{
+  padding:0 2%;
 }
 .allestimenti{
   background-color: #A4C51A;
-  z-index: 10;
-padding-top: 100px;
-padding-bottom: 23px;
+  margin-top: -4px;
+  padding-top: 100px;
+  padding-bottom: 32px;
 }
+ .servizio-desc,.servizio-more{
+    font-size: 0.85rem;
+  }
+
+ .servizio-desc{
+    padding-top: 5px;
+  }
+  .servizio-more{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
 .adulti{
-  background-color: #0095D7;
-  margin-top: 21px;
-padding: 79px 0px;
-vertical-align: top;
+    background-color: #0095D7;
+    margin-top: 18px;
+    padding-top: 90px;
+    vertical-align: top;
+    z-index: -1;
+    position: relative;
+    padding-bottom: 31px;
+  .servizio-desc{
+    margin-top: 76px;
+  }
+  &>img{
+    position: absolute;
+    top: 28%;
+    right: 20px;
+  }
+}
+.lista-adulti {
+  margin-left: 1rem;
+  &>li{
+  text-transform: uppercase;
+  font-family: "open_sansbold";
+  font-size: 1.1rem;
+  }
 }
 .bambini{
-  background-color: #0073B1;
-padding-top: 90px;
+background-color: #0073B1;
+padding-top: 78px;
 vertical-align: top;
+margin-top: 17px;
+&>img{
+  margin-top: 66px;
+}
 }
 .trasmissioni{
   text-align: center;
   background-color: #E5006C;
   padding-bottom:40px;
   color:#fff;
+  &>h3{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
 }
 .lista-trasmissioni>img{
-  margin:0 20px;
+  margin: 0px 40px;
 }
 .artisti{
   background-color: rgb(70, 173, 192);
-padding: 2%;
+padding: 3%;
 }
 .lista-artisti>div{
   margin-bottom: 10px;
 }
 .eventi{
-  padding: 4% 10%;
+  padding: 5% 7.5%;
   background-color: #D7E57F;
   position: relative;
-  section-title{
+  .section-title{
+    font-size: 3.3rem;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    width: 10%;
+    width: 18%;
     position: absolute;
     left: 50%;
     top: 0px;
@@ -124,17 +195,32 @@ padding: 2%;
   }
 }
 .evento{
-  margin-top: 40px;
+  margin-top: 20px;
+  &>.media__img{
+    margin-right: 0;
+  }
+  &>.media__body{
+    padding: 0px 15% 0px 5%;
+    &>h4{
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+    }
+    &>p{
+      font-size: 0.7rem;
+      text-align: justify;
+      word-wrap: break-word;
+    }
+  }
 }
 .contatti{
   padding: 0 2% 2%;
 
 .info,.form{
-  border-right: 1px solid rgb(200, 200, 200);
+  border-right: 2px solid rgb(200, 200, 200);
 }
 }
 .contatti-wrapper{
- border-top: 1px solid rgb(200, 200, 200);
+ border-top: 2px solid rgb(200, 200, 200);
  padding-top:2%
 }
 .logo{
