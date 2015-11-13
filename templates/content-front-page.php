@@ -6,20 +6,22 @@
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5&appId=1555133888082231";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<section class="radio-show striscia striscia2">
-  <div class="u-1/3 inline-block left" >
+<section id="artisti" class="radio-show striscia striscia2">
+  <div class="u-1/3-lap-and-up  left" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/direttamente-da-1.png';?>" alt="Direttamente da" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss">
     <p class="text-center">Tutto in una sera… Tutti insieme gli Artisti <br>
 più amati della radio<br>
 in uno spettacolo staffetta di oltre 3 ore,<br>
 con una scenografia sorprendente</p>
-  </div><div class="u-2/3 inline-block img-container" >
+  </div><div class="u-2/3-lap-and-up img-container" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/radiocomdey.png';?>" alt="Radio Comedy Show">
   </div>
 </section>
-<section class="chi-siamo">
-  <div class="u-1/2 inline-block" ></div><div class="u-1/2 inline-block" >
+<section id="chi-siamo" class="chi-siamo">
+  <div class="u-1/2-lap-and-up " >
+    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chisi.png';?>" alt="">
+  </div><div class="u-1/2-lap-and-up " >
       <p>
         Nel 2009  <span class="green">Luca Sepe</span>, <span class="green">Ugo Cusati</span> e <span class="green">Marinella Ilari</span>, iniziano la loro collaborazione
         in occasione di alcuni Spettacoli in cui i tre svolgevano mansioni artistiche ed
@@ -42,8 +44,8 @@ con una scenografia sorprendente</p>
       </p>
   </div>
 </section>
-<section class="servizi striscia forma">
-  <div class="servizio allestimenti u-1/3 inline-block" >
+<section id="servizi" class="servizi striscia forma">
+  <div class="servizio allestimenti u-1/3-lap-and-up inline-block" >
     <h3>ALLESTIMENTI EVENTI
     <span class="text-moved" >E SERVICE AUDIO E LUCI</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/foto-allestimenti.png';?>" alt="esempi allestimenti">
@@ -53,7 +55,7 @@ con una scenografia sorprendente</p>
     spazio e luogo.
     </p>
     <a href="" title="" class="servizio-more">Leggi Tutto.</a>
-  </div><div class="servizio adulti u-1/3 inline-block" >
+  </div><div class="servizio adulti u-1/3-lap-and-up inline-block" >
     <h3>ANIMAZIONE ADULTI</h3>
     <ul class="lista-adulti">
     <li> speaker</li>
@@ -75,12 +77,13 @@ qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
     <a href="" title="" class="servizio-more" >Leggi Tutto.</a>
-  </div><div class="servizio bambini u-1/3 inline-block" >
+  </div><div class="servizio bambini u-1/3-lap-and-up inline-block" >
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/bambini.png';?>" alt="esempi bambini">
   </div>
 </section>
+
 <section class="trasmissioni">
   <h3>Tutti gli artisti delle sueguenti trasmissioni:</h3>
   <div class="lista-trasmissioni">
@@ -99,7 +102,7 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
     </div>
   </div>
 </section>
-<section class="eventi">
+<section id="eventi" class="eventi">
   <h3 class="section-title">Eventi</h3>
   <div class="evento media inline-block u-1/2">
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/eventi-example.png';?>" alt="Evento" class="media__img">
@@ -117,7 +120,7 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
     </div>
   </div>
 </section>
-<footer class="contatti">
+<footer id="contatti" class="contatti">
   <div class="contatti-wrapper">
   <div class="info inline-block u-1/3">
     <div class="logo"></div>

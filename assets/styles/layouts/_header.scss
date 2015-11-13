@@ -5,7 +5,7 @@
   text-align:center;
 }
 .text-moved{
-  margin-left: 32px;
+  margin-left: 32px; /* !!!!!!!!!!!!! */
   display: block;
 }
 .page-wrapper{
@@ -16,14 +16,20 @@
   width:100%;
 }
 .header-wrapper{
-   padding: 20px 6% 0;
+   padding: 20px 6% 0; /* !!!!!!!!!!!!! */
    & >.container {
-    display: inline-block;
+    margin: 0px auto;
     vertical-align: top;
+    display:inline-block;
     &>p{
-      font-size: 44px;
+      @include inuit-font-size(27px); /* !!!!!!!!!!!!! */
+      @include media-query('lap-and-up'){
+        @include inuit-font-size(44px); /* !!!!!!!!!!!!! */
+      }
       color: rgb(103, 103, 103);
       transform: rotate(-2deg);
+      text-align: center;
+      @include media-query('palm'){margin:0;}
     }
     &>nav{
       font-family: "open_sansbold";
@@ -32,6 +38,10 @@
       text-align: center;
       color:#666666;
       line-height: 1;
+      display:none;
+      @include media-query('lap-and-up'){
+        display:block;
+      }
       li{
         padding: 0px 1.5%;
         &.active{
@@ -45,9 +55,15 @@
 .brand{
   background-image: url("../images/logo.png");
   display: inline-block;
-  width: 350px;
-  height: 218px;
-  margin-right: 30px;
+  height: 160px;
+  max-width: 100%;
+  min-width: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+   @include media-query('lap-and-up'){margin-right: 30px;
+    height: 218px;
+   } /* !!!!!!!!!!!!! */
 }
   .striscia::after {
     content:'';
@@ -56,65 +72,113 @@
     background-repeat: no-repeat;
     width:100%;
     display:block;
-    height:117px;
+    height: 30px;
+    @include media-query('lap-and-up'){ height:117px; /* !!!!!!!!!!!!! */ }
+
   }
 .striscia1::after {
     background-image: url("../images/striscia1.png");
-    margin-top: -45px;
+    @include media-query('lap-and-up'){ margin-top: -45px; }/* !!!!!!!!!!!!! */
 }
 .striscia2::after {
     background-image: url("../images/striscia-2.png");
-    margin-top: -91px;
+    margin-top: -50px;
+   @include media-query('lap-and-up'){ margin-top: -91px; /* !!!!!!!!!!!!! */}
 }
 .forma::after {
     background-image: url("../images/forma.png");
-    margin-top: -72px;
+    margin-top: -27px; /* !!!!!!!!!!!!! */
+    @include media-query('lap-and-up'){
+    margin-top: -72px; /* !!!!!!!!!!!!! */
+    }
     z-index: 11;
-    height: 86px;
+    height: 86px; /* !!!!!!!!!!!!! */
     position:relative;
 }
 .radio-show{
-  margin-bottom: 10px;
-  &>div{vertical-align: top;margin-top: 40px;
+  margin-bottom: 24px; /* !!!!!!!!!!!!! */
+  @include media-query('lap-and-up'){ margin-bottom: 10px; /* !!!!!!!!!!!!! */}
+  &>div{vertical-align: top;margin-top: 40px; /* !!!!!!!!!!!!! */
+    @include media-query(lap-and-up){
+      display:inline-block;
+    }
   }
-  .img-container{margin-top: -76px;}
+  .img-container{
+    margin-top: 0px;
+    padding: 0px 6%;
+    @include media-query(lap-and-up){
+      margin-top: -76px;
+      padding:0;
+    }
+  } /* !!!!!!!!!!!!! */
   .left>img{ display:block; margin:0 auto}
-  .left>.kisskiss{margin: 20px auto;max-width:45%;}
+  .left>.kisskiss{margin: 20px auto;max-width:45%;} /* !!!!!!!!!!!!! */
   p{
     font-size: 1.3rem;
     line-height: 1;
     color: rgb(102, 102, 102);
+    padding: 0px 6%;
+        @include media-query(lap-and-up){
+     padding:0;
+    }
   }
 }
 
 .chi-siamo{
-background-image: url("../images/chisi.png");
-background-size: 100% auto;
-background-repeat: no-repeat;
-width: 100%;
-min-height: 464px;
 position: relative;
+width: 100%;
+overflow: hidden;
+@include font-size(14px);
+@include media-query(lap-and-up){
+  @include font-size(16px);
+}
+
+ &>div{
+  vertical-align: top;
+  @include media-query(palm){padding:0 2%;}
+  @include media-query(lap-and-up){display:inline-block;}
+ }
+
+ & img{ max-width:200%}
+
 }
 .servizi{
   display: inline-block;
-  margin-top: -56px;
+  max-width: 100%;
   color:#fff;
+  @include media-query(lap-and-up){margin-top: -56px;} /* !!!!!!!!!!!!! */
   & h3{
     font-family: "open_sansbold";
   }
 }
 .servizio{
-  padding:0 2%;
+  padding:20px 3%;
+  max-width: 100%;
+  @include font-size(13px);
+  @include media-query(lap-and-up){
+    padding:20px 2%;
+    font-size:1em;
+    line-height: 1.5;
+  }
+  @include media-query(palm){
+    & h3 {
+      @include font-size(20px);
+    }
+  }
+}
+@include media-query(lap-and-up){
+  .servizio-desc, .servizio-more {
+      font-size: 0.85rem;
+  }
 }
 .allestimenti{
-  background-color: #A4C51A;
-  margin-top: -4px;
-  padding-top: 100px;
-  padding-bottom: 32px;
-}
- .servizio-desc,.servizio-more{
-    font-size: 0.85rem;
+  background-color:#A4C51A;
+      @include media-query(lap-and-up){margin-top: -4px; /* !!!!!!!!!!!!! */
+  padding-top: 100px; /* !!!!!!!!!!!!! */
+  padding-bottom: 32px; /* !!!!!!!!!!!!! */
   }
+}
+
 
  .servizio-desc{
     padding-top: 5px;
@@ -125,42 +189,62 @@ position: relative;
   }
 .adulti{
     background-color: #0095D7;
-    margin-top: 18px;
-    padding-top: 90px;
     vertical-align: top;
     z-index: -1;
     position: relative;
-    padding-bottom: 31px;
+    @include media-query(lap-and-up){
+    padding-bottom: 31px; /* !!!!!!!!!!!!! */
+    margin-top: 18px; /* !!!!!!!!!!!!! */
+    padding-top: 90px; /* !!!!!!!!!!!!! */
+    }
   .servizio-desc{
-    margin-top: 76px;
+    margin-top: 10%; /* !!!!!!!!!!!!! */
+    @include media-query(lap-and-up){
+      margin-top: 22%; /* !!!!!!!!!!!!! */
+    }
   }
-  &>img{
-    position: absolute;
-    top: 28%;
-    right: 20px;
+  @include media-query(lap-and-up){
+    &>img{
+      position: absolute;
+      top: 28%;
+      right: 20px; /* !!!!!!!!!!!!! */
+    }
   }
 }
 .lista-adulti {
   margin-left: 1rem;
+  @include media-query(palm){display:inline-block;}
+  width:100%;
   &>li{
   text-transform: uppercase;
   font-family: "open_sansbold";
-  font-size: 1.1rem;
+  @include font-size(17px);
+  @include media-query(lap-and-up){
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
+  }
+
 }
 .bambini{
 background-color: #0073B1;
-padding-top: 78px;
+
 vertical-align: top;
-margin-top: 17px;
+@include media-query(palm){
+padding-bottom: 0;
+}
+@include media-query(lap-and-up){
+padding-top: 78px; /* !!!!!!!!!!!!! */
+margin-top: 17px; /* !!!!!!!!!!!!! */
 &>img{
-  margin-top: 66px;
+  margin-top: 66px; /* !!!!!!!!!!!!! */
+}
 }
 }
 .trasmissioni{
   text-align: center;
   background-color: #E5006C;
-  padding-bottom:40px;
+  padding-bottom:40px; /* !!!!!!!!!!!!! */
   color:#fff;
   &>h3{
     font-size: 3.5rem;
@@ -168,14 +252,14 @@ margin-top: 17px;
   }
 }
 .lista-trasmissioni>img{
-  margin: 0px 40px;
+  margin: 0px 40px; /* !!!!!!!!!!!!! */
 }
 .artisti{
   background-color: rgb(70, 173, 192);
 padding: 3%;
 }
 .lista-artisti>div{
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* !!!!!!!!!!!!! */
 }
 .eventi{
   padding: 5% 7.5%;
@@ -195,7 +279,7 @@ padding: 3%;
   }
 }
 .evento{
-  margin-top: 20px;
+  margin-top: 20px; /* !!!!!!!!!!!!! */
   &>.media__img{
     margin-right: 0;
   }
@@ -227,5 +311,5 @@ padding: 3%;
 background-image: url("../images/logo.png");
 background-size: contain;
 background-repeat: no-repeat;
-height: 80px;
+height: 80px; /* !!!!!!!!!!!!! */
 }

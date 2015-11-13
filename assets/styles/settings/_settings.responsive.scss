@@ -1,0 +1,11 @@
+    @include media-query("palm"){
+      $inuit-base-font-size:          12px !default;
+      $inuit-base-line-height:        18px !default;
+    }
+    /*
+    @include media-query("lap")
+    @include media-query("lap-and-up" )
+    @include media-query("portable")
+    @include media-query("desk"    )
+    @include media-query("retina"  )
+*/
