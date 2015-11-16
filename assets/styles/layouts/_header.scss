@@ -93,7 +93,7 @@
     height: 86px; /* !!!!!!!!!!!!! */
     }
     z-index: 11;
-    
+
     position:relative;
 }
 .radio-show{
@@ -107,11 +107,11 @@
   .img-container{
     margin-top: 0px;
     &>img{
-    padding: 0px 6%;    
-    }  
+    padding: 0px 6%;
+    }
     @include media-query(lap-and-up){
-      margin-top: -76px;      
-      padding: 0px 0 0 4%;    
+      margin-top: -76px;
+      padding: 0px 0 0 4%;
       &>img{
         padding: 0;
         width: 66%;
@@ -127,7 +127,7 @@
     color: rgb(102, 102, 102);
     padding: 0px 6%;
         @include media-query(lap-and-up){
-              @include font-size(16px);    
+              @include font-size(16px);
     line-height: 1;
      padding:0;
     }
@@ -206,7 +206,7 @@ p{padding-top: 15px;}
     z-index: -1;
     position: relative;
   @include media-query(lap-and-up){
-    padding-bottom: 31px; /* !!!!!!!!!!!!! */    
+    padding-bottom: 31px; /* !!!!!!!!!!!!! */
     padding-top: 90px; /* !!!!!!!!!!!!! */
     &>h3{margin-bottom:36px;}
     .servizio-desc{
@@ -230,7 +230,7 @@ p{padding-top: 15px;}
   @include font-size(17px);
   @include media-query(lap-and-up){
     font-size: 1.1rem;
-    
+
 
   }
   }
@@ -271,7 +271,7 @@ padding-top: 78px; /* !!!!!!!!!!!!! */
 
 .lista-trasmissioni>img{
   margin-bottom: 20px;
-  @include media-query(lap-and-up){  
+  @include media-query(lap-and-up){
     margin: 0px 40px; /* !!!!!!!!!!!!! */
   }
 }
@@ -280,10 +280,20 @@ padding-top: 78px; /* !!!!!!!!!!!!! */
 padding: 12% 3% 15%;
 @include media-query(lap-and-up){
   padding:3% 3% 5%;
-} 
+}
+}
+.artisti-wrapper{
+  overflow:hidden;
+  position:relative;
+  @include media-query(lap-and-up){
+      &>.swiper-button-prev,&>.swiper-button-next{
+        display:none;
+      }
+  }
 }
 .lista-artisti>div{
   margin-bottom: 10px; /* !!!!!!!!!!!!! */
+  display:inline-block;
   &>img{
     margin: 0 auto;
     display: block;
@@ -297,7 +307,7 @@ padding: 12% 3% 15%;
   background-color: #D7E57F;
   position: relative;
   .section-title{
-    
+
     @include font-size(54.4px);
     @include font-size(34px);
     text-align: center;
@@ -313,13 +323,23 @@ padding: 12% 3% 15%;
     }
   }
 }
+.eventi-wrapper{
+  overflow:hidden;
+}
 .evento{
   margin-top: 20px; /* !!!!!!!!!!!!! */
+  text-align: center;
   &>.media__img{
     margin-right: 0;
+    @include media-query(palm){
+      float:none;
+    }
   }
   &>.media__body{
-    padding: 0px 15% 0px 5%;
+    padding: 0px 5%;
+    @include media-query(lap-and-up){
+      padding: 0px 15% 0px 5%;
+    }
     &>h4{
     font-size: 2.2rem;
     margin-bottom: 0.7rem;
@@ -334,7 +354,7 @@ padding: 12% 3% 15%;
 .contatti{
   padding: 0 2% 2%;
   text-align: center;
-.logo{margin: 0 auto 1.5rem }
+.logo{margin: 0 auto 1.5rem ;width:100%;}
  @include media-query(lap-and-up){
   .info,.form{
     border-right: 2px solid rgb(200, 200, 200);
@@ -344,21 +364,40 @@ padding: 12% 3% 15%;
 .contatti-wrapper{
  border-top: 2px solid rgb(200, 200, 200);
  padding-top:5%;
+ position:relative;
+
  &>div{
   width:100%;
+  vertical-align: middle;
+ }
+ .info,.fb{
+align-self: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
  }
   @include media-query(lap-and-up){
+     display:flex;
     padding-top:2%;
     &>div{
       display:inline-block;
-      width:33%;    
+      width:33%;
     }
  }
 }
+.fb{    padding: 0px 2%;
+* {
+   width: 100% !important;
+}
+}
+
 .logo{
 background-image: url("../images/logo.png");
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center center;
 height: 80px; /* !!!!!!!!!!!!! */
+}
+.wpcf7-form-control {
+    max-width: 100% !important;
 }

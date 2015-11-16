@@ -45,7 +45,7 @@
     <a href="" title="" class="servizio-more">Leggi Tutto.</a>
   </div><div class="servizio adulti u-1/3-lap-and-up inline-block" >
     <h3>ANIMAZIONE ADULTI</h3>
-    <div>          
+    <div>
     <ul class="lista-adulti">
     <li> speaker</li>
     <li> artisti di strada</li>
@@ -96,32 +96,66 @@ con una scenografia sorprendente</p>
 </section>
 
 <section id="artisti" class="artisti">
-  <div class="lista-artisti">
-    <div>
-      <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/box-sepe.png';?>" alt="Luca Sepe" >
+  <div class="artisti-wrapper">
+  <div class="lista-artisti ">
+  <?php
+
+    $args = array( 'post_type' => 'artisti', 'posts_per_page' => -1 );
+    $loop = new WP_Query( $args );
+    while ( $loop->have_posts() ) : $loop->the_post();
+  ?>
+  <div class=""><?php the_post_thumbnail(); ?></div>
+ <?php endwhile; ?>
+
     </div>
-    <div>
-      <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/box-sepe.png';?>" alt="Luca Sepe" >
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </div>
+
   </div>
 </section>
 <section id="eventi" class="eventi">
   <h3 class="section-title">Eventi</h3>
-  <div class="evento media inline-block u-1/2">
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/eventi-example.png';?>" alt="Evento" class="media__img">
+    <div class="eventi-wrapper">
+  <div class="lista-eventi swiper-wrapper ">
+  <?php
+    $today = date('Ymd');
+    $args = array( 'post_type' => 'eventi', 'posts_per_page' => -1,
+          'meta_key' => 'data', // name of custom field
+  'orderby' => 'meta_value_num',
+  'order' => 'ASC',
+   'meta_query' => array(
+    array(
+          'key'   => 'data',
+          'compare' => '>=',
+          'value'   => $today,
+      )
+      ));
+    $loop = new WP_Query( $args );
+    while ( $loop->have_posts() ) : $loop->the_post();
+  ?>
+  <div class="evento media inline-block u-1/2-lap-and-up swiper-slide">
+    <?php $default_attr = array(
+  'class' => "media__img"
+); the_post_thumbnail('full',$default_attr); ?>
     <div class="media__body">
-      <h4>14 Giugno 2015</h4>
-      <h4>Napoli</h4>
-      <p>Testo esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempio</p>
-    </div>
-  </div><div class="evento media inline-block u-1/2">
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/eventi-example.png';?>" alt="Evento" class="media__img">
-    <div class="media__body">
-      <h4>14 Giugno 2015</h4>
-      <h4>Napoli</h4>
-      <p>Testo esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempioTesto esempio</p>
+      <h4><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
+echo $date->format('d-m-Y'); ?></h4>
+      <h4><?php the_field('luogo'); ?></h4>
+      <p><?php the_content();?></p>
     </div>
   </div>
+ <?php endwhile; ?>
+
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+
+
+
 </section>
 <footer id="contatti" class="contatti">
   <div class="contatti-wrapper">
@@ -133,8 +167,8 @@ Via Alberto da Nola, 31 - Nola (Na) <br>
 Tel. 081 823 16 02 - 334 94 04 457 <br>
 www.melaridoeventi.com
     </p>
-  </div><div class="form"></div><div class="fb">
-    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-width="408" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
+  </div><div class="form"><?php echo do_shortcode('[contact-form-7 id="4" title="Contatti"]' ); ?></div><div class="fb">
+    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
   </div>
   </div>
 </footer>

@@ -18,7 +18,29 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+        var mySwiper;
+        enquire.register("screen and (max-width:800px)", {
+
+            match : function() {
+            $('.lista-artisti').addClass('swiper-wrapper');
+            $('.lista-artisti>div').addClass('swiper-slide');
+             mySwiper = new Swiper('.artisti-wrapper', {
+                  autoplay:2000
+              });
+            },
+            unmatch : function() {
+              if(mySwiper.destroy)mySwiper.destroy(true,true);
+              $('.lista-artisti').removeClass('swiper-wrapper');
+              $('.lista-artisti>div').removeClass('swiper-slide');
+              $('.contatti-wrapper > div').matchHeight();
+            },
+
+        });
+        mySwiper = new Swiper('.eventi-wrapper', {
+                  autoplay:2000
+                  ,slidesPerView: 'auto'
+              });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
