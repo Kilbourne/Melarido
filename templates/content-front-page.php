@@ -6,18 +6,6 @@
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5&appId=1555133888082231";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<section id="artisti" class="radio-show striscia striscia2">
-  <div class="u-1/3-lap-and-up  left" >
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/direttamente-da-1.png';?>" alt="Direttamente da" >
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss">
-    <p class="text-center">Tutto in una sera… Tutti insieme gli Artisti <br>
-più amati della radio<br>
-in uno spettacolo staffetta di oltre 3 ore,<br>
-con una scenografia sorprendente</p>
-  </div><div class="u-2/3-lap-and-up img-container" >
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/radiocomdey.png';?>" alt="Radio Comedy Show">
-  </div>
-</section>
 <section id="chi-siamo" class="chi-siamo">
   <div class="u-1/2-lap-and-up " >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chisi.png';?>" alt="">
@@ -57,6 +45,7 @@ con una scenografia sorprendente</p>
     <a href="" title="" class="servizio-more">Leggi Tutto.</a>
   </div><div class="servizio adulti u-1/3-lap-and-up inline-block" >
     <h3>ANIMAZIONE ADULTI</h3>
+    <div>          
     <ul class="lista-adulti">
     <li> speaker</li>
     <li> artisti di strada</li>
@@ -72,6 +61,7 @@ con una scenografia sorprendente</p>
 
     </ul>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/adulti.png';?>" alt="Esempi Adulti">
+    </div>
     <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
 qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
@@ -92,7 +82,20 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
       <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/zelig.png';?>" alt="Zelig" class="inline-block">
   </div>
 </section>
-<section class="artisti">
+<section  class="radio-show">
+  <div class="u-1/3-lap-and-up  left" >
+    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/direttamente-da-1.png';?>" alt="Direttamente da" >
+    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss">
+    <p class="text-center">Tutto in una sera… Tutti insieme gli Artisti <br>
+più amati della radio<br>
+in uno spettacolo staffetta di oltre 3 ore,<br>
+con una scenografia sorprendente</p>
+  </div><div class="u-2/3-lap-and-up img-container striscia striscia2" >
+    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/radiocomdey.png';?>" alt="Radio Comedy Show">
+  </div>
+</section>
+
+<section id="artisti" class="artisti">
   <div class="lista-artisti">
     <div>
       <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/box-sepe.png';?>" alt="Luca Sepe" >
@@ -122,7 +125,7 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
 </section>
 <footer id="contatti" class="contatti">
   <div class="contatti-wrapper">
-  <div class="info inline-block u-1/3">
+  <div class="info">
     <div class="logo"></div>
     <p>
       Melarido Srls <br>
@@ -130,7 +133,7 @@ Via Alberto da Nola, 31 - Nola (Na) <br>
 Tel. 081 823 16 02 - 334 94 04 457 <br>
 www.melaridoeventi.com
     </p>
-  </div><div class="form inline-block u-1/3"></div><div class="fb inline-block u-1/3">
+  </div><div class="form"></div><div class="fb">
     <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-width="408" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
   </div>
   </div>

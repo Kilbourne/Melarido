@@ -5,7 +5,7 @@
   text-align:center;
 }
 .text-moved{
-  margin-left: 32px; /* !!!!!!!!!!!!! */
+  margin-left: 8.65%; /* !!!!!!!!!!!!! */
   display: block;
 }
 .page-wrapper{
@@ -77,11 +77,11 @@
 
   }
 .striscia1::after {
-    background-image: url("../images/striscia1.png");
+    background-image: url("../images/striscia-2.png");
     @include media-query('lap-and-up'){ margin-top: -45px; }/* !!!!!!!!!!!!! */
 }
 .striscia2::after {
-    background-image: url("../images/striscia-2.png");
+    background-image: url("../images/striscia1.png");
     margin-top: -50px;
    @include media-query('lap-and-up'){ margin-top: -91px; /* !!!!!!!!!!!!! */}
 }
@@ -89,36 +89,46 @@
     background-image: url("../images/forma.png");
     margin-top: -27px; /* !!!!!!!!!!!!! */
     @include media-query('lap-and-up'){
-    margin-top: -72px; /* !!!!!!!!!!!!! */
+    margin-top: -74px; /* !!!!!!!!!!!!! */
+    height: 86px; /* !!!!!!!!!!!!! */
     }
     z-index: 11;
-    height: 86px; /* !!!!!!!!!!!!! */
+    
     position:relative;
 }
 .radio-show{
-  margin-bottom: 24px; /* !!!!!!!!!!!!! */
+  margin-bottom: 2rem; /* !!!!!!!!!!!!! */
   @include media-query('lap-and-up'){ margin-bottom: 10px; /* !!!!!!!!!!!!! */}
-  &>div{vertical-align: top;margin-top: 40px; /* !!!!!!!!!!!!! */
+  &>div{vertical-align: baseline;margin-top: 40px; /* !!!!!!!!!!!!! */
     @include media-query(lap-and-up){
       display:inline-block;
     }
   }
   .img-container{
     margin-top: 0px;
-    padding: 0px 6%;
+    &>img{
+    padding: 0px 6%;    
+    }  
     @include media-query(lap-and-up){
-      margin-top: -76px;
-      padding:0;
+      margin-top: -76px;      
+      padding: 0px 0 0 4%;    
+      &>img{
+        padding: 0;
+        width: 66%;
+        display: block;
+        margin: 0px auto;
+      }
     }
   } /* !!!!!!!!!!!!! */
   .left>img{ display:block; margin:0 auto}
   .left>.kisskiss{margin: 20px auto;max-width:45%;} /* !!!!!!!!!!!!! */
   p{
-    font-size: 1.3rem;
-    line-height: 1;
+    @include font-size(13px);
     color: rgb(102, 102, 102);
     padding: 0px 6%;
         @include media-query(lap-and-up){
+              @include font-size(16px);    
+    line-height: 1;
      padding:0;
     }
   }
@@ -132,7 +142,7 @@ overflow: hidden;
 @include media-query(lap-and-up){
   @include font-size(16px);
 }
-
+p{padding-top: 15px;}
  &>div{
   vertical-align: top;
   @include media-query(palm){padding:0 2%;}
@@ -146,7 +156,7 @@ overflow: hidden;
   display: inline-block;
   max-width: 100%;
   color:#fff;
-  @include media-query(lap-and-up){margin-top: -56px;} /* !!!!!!!!!!!!! */
+  @include media-query(lap-and-up){margin-top: -46px;} /* !!!!!!!!!!!!! */
   & h3{
     font-family: "open_sansbold";
   }
@@ -156,7 +166,7 @@ overflow: hidden;
   max-width: 100%;
   @include font-size(13px);
   @include media-query(lap-and-up){
-    padding:20px 2%;
+    padding:20px 2% 0;
     font-size:1em;
     line-height: 1.5;
   }
@@ -168,20 +178,23 @@ overflow: hidden;
 }
 @include media-query(lap-and-up){
   .servizio-desc, .servizio-more {
-      font-size: 0.85rem;
+      @include font-size(12px,1.5);
+      font-weight: 600,
   }
 }
 .allestimenti{
   background-color:#A4C51A;
-      @include media-query(lap-and-up){margin-top: -4px; /* !!!!!!!!!!!!! */
-  padding-top: 100px; /* !!!!!!!!!!!!! */
+      @include media-query(lap-and-up){margin-top: -20px; /* !!!!!!!!!!!!! */
+  padding-top: 98px; /* !!!!!!!!!!!!! */
   padding-bottom: 32px; /* !!!!!!!!!!!!! */
   }
 }
 
 
  .servizio-desc{
-    padding-top: 5px;
+  margin-top: 0.5rem; /* !!!!!!!!!!!!! */
+    margin-bottom: 1rem;
+
   }
   .servizio-more{
     text-decoration: none;
@@ -192,26 +205,22 @@ overflow: hidden;
     vertical-align: top;
     z-index: -1;
     position: relative;
-    @include media-query(lap-and-up){
-    padding-bottom: 31px; /* !!!!!!!!!!!!! */
-    margin-top: 18px; /* !!!!!!!!!!!!! */
-    padding-top: 90px; /* !!!!!!!!!!!!! */
-    }
-  .servizio-desc{
-    margin-top: 10%; /* !!!!!!!!!!!!! */
-    @include media-query(lap-and-up){
-      margin-top: 22%; /* !!!!!!!!!!!!! */
-    }
-  }
   @include media-query(lap-and-up){
-    &>img{
+    padding-bottom: 31px; /* !!!!!!!!!!!!! */    
+    padding-top: 90px; /* !!!!!!!!!!!!! */
+    &>h3{margin-bottom:36px;}
+    .servizio-desc{
+      margin-top: 23.3%; /* !!!!!!!!!!!!! */
+    }
+    &>div>img{
       position: absolute;
-      top: 28%;
+      top: 30%;
       right: 20px; /* !!!!!!!!!!!!! */
     }
   }
 }
 .lista-adulti {
+
   margin-left: 1rem;
   @include media-query(palm){display:inline-block;}
   width:100%;
@@ -221,7 +230,8 @@ overflow: hidden;
   @include font-size(17px);
   @include media-query(lap-and-up){
     font-size: 1.1rem;
-    line-height: 1.5;
+    
+
   }
   }
 
@@ -235,47 +245,72 @@ padding-bottom: 0;
 }
 @include media-query(lap-and-up){
 padding-top: 78px; /* !!!!!!!!!!!!! */
-margin-top: 17px; /* !!!!!!!!!!!!! */
 &>img{
-  margin-top: 66px; /* !!!!!!!!!!!!! */
+  max-width: 107%;
 }
 }
 }
 .trasmissioni{
+  position:relative;
+  z-index: 21;
   text-align: center;
   background-color: #E5006C;
-  padding-bottom:40px; /* !!!!!!!!!!!!! */
+  margin-top:-10px;
+  padding: 20px 0;
   color:#fff;
+
   &>h3{
-    font-size: 3.5rem;
+    @include font-size(40px);
+    font-weight: 400;
     margin-bottom: 2rem;
+    @include media-query(lap-and-up){
+        @include font-size(54px);
+    }
   }
 }
+
 .lista-trasmissioni>img{
-  margin: 0px 40px; /* !!!!!!!!!!!!! */
+  margin-bottom: 20px;
+  @include media-query(lap-and-up){  
+    margin: 0px 40px; /* !!!!!!!!!!!!! */
+  }
 }
 .artisti{
   background-color: rgb(70, 173, 192);
-padding: 3%;
+padding: 12% 3% 15%;
+@include media-query(lap-and-up){
+  padding:3% 3% 5%;
+} 
 }
 .lista-artisti>div{
   margin-bottom: 10px; /* !!!!!!!!!!!!! */
+  &>img{
+    margin: 0 auto;
+    display: block;
+  }
 }
 .eventi{
+  padding: 12% 7.5% 5%;
+  @include media-query(lap-and-up){
   padding: 5% 7.5%;
+  }
   background-color: #D7E57F;
   position: relative;
   .section-title{
-    font-size: 3.3rem;
+    
+    @include font-size(54.4px);
+    @include font-size(34px);
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    width: 18%;
     position: absolute;
     left: 50%;
     top: 0px;
     transform: translate(-50%, -50%);
-    padding: 2%;
+    padding: 5% 12%;
+    @include media-query(lap-and-up){
+      padding: 1% 3%;
+    }
   }
 }
 .evento{
@@ -298,18 +333,32 @@ padding: 3%;
 }
 .contatti{
   padding: 0 2% 2%;
-
-.info,.form{
-  border-right: 2px solid rgb(200, 200, 200);
+  text-align: center;
+.logo{margin: 0 auto 1.5rem }
+ @include media-query(lap-and-up){
+  .info,.form{
+    border-right: 2px solid rgb(200, 200, 200);
+  }
 }
 }
 .contatti-wrapper{
  border-top: 2px solid rgb(200, 200, 200);
- padding-top:2%
+ padding-top:5%;
+ &>div{
+  width:100%;
+ }
+  @include media-query(lap-and-up){
+    padding-top:2%;
+    &>div{
+      display:inline-block;
+      width:33%;    
+    }
+ }
 }
 .logo{
 background-image: url("../images/logo.png");
 background-size: contain;
 background-repeat: no-repeat;
+background-position: center center;
 height: 80px; /* !!!!!!!!!!!!! */
 }
