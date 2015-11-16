@@ -44,8 +44,8 @@
     "inuit-widths": "latest",
     "inuit-widths-responsive": "latest",
     "swiper": "~3.2.0",
-    "enquire": "~2.1.2",
-    "matchheight": "~0.6.0"
+    "enquire": "~2.1.2"
+    
   },
   "overrides": {
     "bootstrap-sass": {

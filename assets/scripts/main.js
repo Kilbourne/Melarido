@@ -32,7 +32,7 @@
               if(mySwiper.destroy)mySwiper.destroy(true,true);
               $('.lista-artisti').removeClass('swiper-wrapper');
               $('.lista-artisti>div').removeClass('swiper-slide');
-              $('.contatti-wrapper > div').matchHeight();
+              
             },
 
         });

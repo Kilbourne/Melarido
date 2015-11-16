@@ -355,9 +355,11 @@ padding: 12% 3% 15%;
   padding: 0 2% 2%;
   text-align: center;
 .logo{margin: 0 auto 1.5rem ;width:100%;}
+.info,.form{padding: 0 2%;}
  @include media-query(lap-and-up){
-  .info,.form{
+  .form{
     border-right: 2px solid rgb(200, 200, 200);
+    border-left: 2px solid rgb(200, 200, 200);
   }
 }
 }

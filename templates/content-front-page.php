@@ -113,7 +113,7 @@ con una scenografia sorprendente</p>
     <div class="swiper-button-next"></div>
     </div>
 
-  </div>
+  
 </section>
 <section id="eventi" class="eventi">
   <h3 class="section-title">Eventi</h3>
