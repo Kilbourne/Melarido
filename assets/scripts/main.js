@@ -19,28 +19,58 @@
     'common': {
       init: function() {
         var mySwiper;
-        enquire.register("screen and (max-width:800px)", {
+        enquire.register("screen and (max-width:1010px)", {
 
             match : function() {
             $('.lista-artisti').addClass('swiper-wrapper');
             $('.lista-artisti>div').addClass('swiper-slide');
              mySwiper = new Swiper('.artisti-wrapper', {
                   autoplay:2000
+                  ,slidesPerView: 'auto'
+                  ,autoplayDisableOnInteraction:true
+                  ,nextButton:'.swiper-button-next'
+                  ,prevButton:'.swiper-button-prev'
               });
+
+             $('.artisti-wrapper').hover(
+                function() {
+                  mySwiper.stopAutoplay();
+                }, function() {
+                  mySwiper.startAutoplay();
+                }
+
+              );
+
             },
             unmatch : function() {
+              $('.artisti-wrapper').off('hover');
               if(mySwiper.destroy)mySwiper.destroy(true,true);
               $('.lista-artisti').removeClass('swiper-wrapper');
               $('.lista-artisti>div').removeClass('swiper-slide');
-              
+
             },
 
         });
-        mySwiper = new Swiper('.eventi-wrapper', {
+        mySwiper1 = new Swiper('.eventi-wrapper', {
                   autoplay:2000
                   ,slidesPerView: 'auto'
-              });
+                  ,autoplayDisableOnInteraction:true
+                  ,nextButton:'.swiper-button-next'
+                  ,prevButton:'.swiper-button-prev'
+        });
+        $('.eventi-wrapper').hover(
+                function() {
+                  mySwiper.stopAutoplay();
+                }, function() {
+                  mySwiper.startAutoplay();
+                }
 
+              );
+        $('.lista-artisti').magnificPopup({
+            delegate: '.ajax-popup-link', // child items selector, by clicking on it popup will open
+            type: 'ajax'
+            // other options
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

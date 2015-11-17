@@ -285,18 +285,29 @@ padding: 12% 3% 15%;
 .artisti-wrapper{
   overflow:hidden;
   position:relative;
-  @include media-query(lap-and-up){
+  @media(min-width: 1010px){
       &>.swiper-button-prev,&>.swiper-button-next{
         display:none;
       }
   }
 }
-.lista-artisti>div{
+.lista-artisti{
+   @media (min-width: 1010px ){
+    display:inline-block;
+    text-align: center;
+  }
+  &>div{
   margin-bottom: 10px; /* !!!!!!!!!!!!! */
   display:inline-block;
+  text-align: center;
+  @media (max-width: 1010px ) and ( min-width:702px){
+    width:50%;
+  }
+
   &>img{
     margin: 0 auto;
     display: block;
+  }
   }
 }
 .eventi{
@@ -327,19 +338,22 @@ padding: 12% 3% 15%;
   overflow:hidden;
 }
 .evento{
+  padding: 4%;
+  box-sizing: border-box;
+  color:rgb(46, 46, 49);
   margin-top: 20px; /* !!!!!!!!!!!!! */
   text-align: center;
   &>.media__img{
-    margin-right: 0;
+    margin-right: 4%;
     @include media-query(palm){
       float:none;
     }
   }
   &>.media__body{
-    padding: 0px 5%;
-    @include media-query(lap-and-up){
-      padding: 0px 15% 0px 5%;
-    }
+    //padding: 0px 5%;
+    //@include media-query(lap-and-up){
+      //padding: 0px 15% 0px 5%;
+    //}
     &>h4{
     font-size: 2.2rem;
     margin-bottom: 0.7rem;
@@ -402,4 +416,36 @@ height: 80px; /* !!!!!!!!!!!!! */
 }
 .wpcf7-form-control {
     max-width: 100% !important;
+}
+.mfp-content{
+  background-color: rgb(255, 255, 255);
+  max-width: 1000px;
+  padding: 3%;
+}
+.artista-single{
+  &>h3{text-align: center;}
+  &>.img-cont{
+    display: inline-block;
+    margin-right: 1.5rem;
+     vertical-align: middle;
+     margin-bottom: 1.5rem;
+  }
+  &>.content{
+    max-width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @media(max-width: 682px){
+     &>.img-cont{
+
+display:block;
+&>img{
+  display:block;
+  margin:0 auto;
+}
+  }
+  &>.content{
+    max-width: 100%;
+  }
+  }
 }

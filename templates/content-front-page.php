@@ -104,7 +104,7 @@ con una scenografia sorprendente</p>
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
-  <div class=""><?php the_post_thumbnail(); ?></div>
+  <div class=""><a href="<?php echo get_the_permalink(); ?>" class="ajax-popup-link" ><?php the_post_thumbnail(); ?></a></div>
  <?php endwhile; ?>
 
     </div>
@@ -113,7 +113,7 @@ con una scenografia sorprendente</p>
     <div class="swiper-button-next"></div>
     </div>
 
-  
+
 </section>
 <section id="eventi" class="eventi">
   <h3 class="section-title">Eventi</h3>
@@ -135,17 +135,17 @@ con una scenografia sorprendente</p>
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
-  <div class="evento media inline-block u-1/2-lap-and-up swiper-slide">
-    <?php $default_attr = array(
-  'class' => "media__img"
-); the_post_thumbnail('full',$default_attr); ?>
-    <div class="media__body">
-      <h4><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
-echo $date->format('d-m-Y'); ?></h4>
-      <h4><?php the_field('luogo'); ?></h4>
-      <p><?php the_content();?></p>
-    </div>
-  </div>
+  <a href="<?php the_permalink(); ?>" class="ajax-popup-link evento media  u-1/2-lap-and-up swiper-slide">
+      <div class="media__img">
+        <?php  the_post_thumbnail(); ?>
+      </div>
+      <div class="media__body">
+        <h4><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
+  echo $date->format('d-m-Y'); ?></h4>
+        <h4><?php the_field('luogo'); ?></h4>
+        <p><?php the_content();?></p>
+      </div>
+  </a>
  <?php endwhile; ?>
 
     </div>

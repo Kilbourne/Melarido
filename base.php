@@ -3,9 +3,13 @@
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
+if(is_front_page()){
+
+
 ?>
 
 <!doctype html>
+
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
@@ -22,7 +26,11 @@ use Roots\Sage\Wrapper;
 
       <div class="content row">
         <main class="main">
-          <?php include Wrapper\template_path(); ?>
+
+
+
+
+          <?php  include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">
@@ -39,3 +47,6 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
   </body>
 </html>
+
+<?php }else{ ?>
+<?php  include Wrapper\template_path(); }?>
