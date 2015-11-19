@@ -15,7 +15,9 @@ var jsTasks = function(filename) {
       return $.if(enabled.maps, $.sourcemaps.init());
     })
     .pipe($.concat, filename)
-    .pipe($.uglify,config.uglify)
+    .pipe(function() {
+      return $.if(enabled.rev, $.uglify(config.uglify));
+    })
     .pipe(function() {
       return $.if(enabled.rev, $.rev());
     })

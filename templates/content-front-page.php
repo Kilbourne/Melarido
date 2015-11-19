@@ -42,7 +42,7 @@
     nostra consulenza, far fronte ad ogni tipo di esigenza di
     spazio e luogo.
     </p>
-    <a href="" title="" class="servizio-more">Leggi Tutto.</a>
+  <a href="<?php  $page = get_page_by_title( 'Service' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
   </div><div class="servizio adulti u-1/3-lap-and-up inline-block" >
     <h3>ANIMAZIONE ADULTI</h3>
     <div>
@@ -66,7 +66,7 @@
 qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
-    <a href="" title="" class="servizio-more" >Leggi Tutto.</a>
+    <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
   </div><div class="servizio bambini u-1/3-lap-and-up inline-block" >
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
@@ -93,6 +93,7 @@ con una scenografia sorprendente</p>
   </div><div class="u-2/3-lap-and-up img-container striscia striscia2" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/radiocomdey.png';?>" alt="Radio Comedy Show">
   </div>
+
 </section>
 
 <section id="artisti" class="artisti">

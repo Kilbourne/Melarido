@@ -136,6 +136,7 @@
 
 .chi-siamo{
 position: relative;
+z-index: 21;
 width: 100%;
 overflow: hidden;
 @include font-size(14px);
@@ -199,11 +200,13 @@ p{padding-top: 15px;}
   .servizio-more{
     text-decoration: none;
     color: rgb(255, 255, 255);
+    z-index: 21;
+    position:relative;
   }
 .adulti{
     background-color: #0095D7;
     vertical-align: top;
-    z-index: -1;
+
     position: relative;
   @include media-query(lap-and-up){
     padding-bottom: 31px; /* !!!!!!!!!!!!! */

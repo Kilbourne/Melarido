@@ -71,6 +71,11 @@
             type: 'ajax'
             // other options
         });
+         $('.servizio-more').magnificPopup({
+
+            type: 'ajax'
+            // other options
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
