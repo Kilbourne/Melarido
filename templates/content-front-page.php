@@ -158,6 +158,12 @@ con una scenografia sorprendente</p>
 
 
 </section>
+<section id="gallery" class="gallery">
+  <h3 class="section-title">Gallery</h3>
+  <div class="gallery-wrapper">
+    <?php echo photo_gallery(3); ?>
+  </div>
+</section>
 <footer id="contatti" class="contatti">
   <div class="contatti-wrapper">
   <div class="info">
