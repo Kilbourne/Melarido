@@ -45,36 +45,7 @@ if(is_front_page()){
       wp_footer();
     ?>
     </div><!-- /.wrap -->
-    <div class=""  id="responsive-menu">
 
-
-        <div id="responsive-menu-title">
-
-
-
-            Menu Title
-
-        </div>
-
-    <div class="responsive-menu"><ul><li class="page_item page-item-47"><a href="//localhost:3000/melarido/animazione-adulti/">Animazione Adulti</a></li><li class="page_item page-item-49"><a href="//localhost:3000/melarido/service/">Service</a></li></ul></div>
-
-
-
-
-</div>
-<div id="click-menu" class="overlay" role="button" aria-label="Responsive Menu Button">
-
-
-
-    <div class="threeLines" id="RM3Lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-
-
-
-</div>
   </body>
 </html>
 

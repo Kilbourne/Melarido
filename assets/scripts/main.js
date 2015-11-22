@@ -18,7 +18,7 @@
     // All pages
     'common': {
       init: function() {
-        function respMenu(){ var $RMjQuery = jQuery.noConflict();
+        (function respMenu(){ var $RMjQuery = jQuery.noConflict();
 $RMjQuery(document).ready(function() {
     var isOpen = false;
     $RMjQuery(document).on('click', '#click-menu', function() {
@@ -89,7 +89,7 @@ $RMjQuery(document).ready(function() {
     });
     $RMjQuery('.rm-append-inactive').siblings('ul').css('display', 'none')
 });
-}();
+})();
         var mySwiper;
         enquire.register("screen and (max-width:1010px)", {
 
