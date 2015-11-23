@@ -100,8 +100,8 @@ $RMjQuery(document).ready(function() {
                   autoplay:2000
                   ,slidesPerView: 'auto'
                   ,autoplayDisableOnInteraction:true
-                  ,nextButton:'.swiper-button-next'
-                  ,prevButton:'.swiper-button-prev'
+                  ,nextButton:'#artisti .swiper-button-next'
+                  ,prevButton:'#artisti .swiper-button-prev'
               });
 
              $('.artisti-wrapper').hover(
@@ -127,8 +127,8 @@ $RMjQuery(document).ready(function() {
                   autoplay:2000
                   ,slidesPerView: 'auto'
                   ,autoplayDisableOnInteraction:true
-                  ,nextButton:'.swiper-button-next'
-                  ,prevButton:'.swiper-button-prev'
+                  ,nextButton:'#eventi .swiper-button-next'
+                  ,prevButton:'#eventi .swiper-button-prev'
         });
         $('.eventi-wrapper').hover(
                 function() {

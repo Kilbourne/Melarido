@@ -15,7 +15,7 @@
           <li><a href="#servizi" title="">Servizi</a></li>
           <li><a href="#artisti" title="">Artisti</a></li>
           <li><a href="#eventi" title="">Eventi</a></li>
-          <li><a href="#eventi" title="">Gallery</a></li>
+          <li><a href="#gallery" title="">Gallery</a></li>
           <li><a href="#contatti" title="">Contatti</a></li>
         </ul></div>
 
@@ -47,7 +47,7 @@
           <li><a href="#servizi" title="">Servizi</a></li>
           <li><a href="#artisti" title="">Artisti</a></li>
           <li><a href="#eventi" title="">Eventi</a></li>
-          <li><a href="#eventi" title="">Gallery</a></li>
+          <li><a href="#gallery" title="">Gallery</a></li>
           <li><a href="#contatti" title="">Contatti</a></li>
         </ul>
       </nav>
