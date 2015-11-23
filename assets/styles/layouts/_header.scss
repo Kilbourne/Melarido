@@ -16,11 +16,17 @@
   width:100%;
 }
 .header-wrapper{
-   padding: 20px 6% 0; /* !!!!!!!!!!!!! */
+   padding: 20px 1% 0px 9%;
+   @include media-query('palm'){
+    text-align: center;
+   }
    & >.container {
     margin: 0px auto;
     vertical-align: top;
     display:inline-block;
+    @include media-query('lap-and-up'){
+    width: 69.2%;
+    }
     &>p{
       @include inuit-font-size(27px); /* !!!!!!!!!!!!! */
       @include media-query('lap-and-up'){
@@ -33,13 +39,15 @@
     }
     &>nav{
       font-family: "open_sansbold";
-      margin-top: 2.75rem;
+      @media(min-width: 1077px){
+        margin-top: 2.75rem;
+      }
       font-size: 1.1rem;
       text-align: center;
       color:#666666;
       line-height: 1;
       display:none;
-      @include media-query('lap-and-up'){
+      @media(min-width:53.4em){
         display:block;
       }
       li{
@@ -53,17 +61,15 @@
   }
 }
 .brand{
-  background-image: url("../images/logo.png");
-  display: inline-block;
-  height: 160px;
-  max-width: 100%;
-  min-width: 350px;
-  background-size: contain;
-  background-repeat: no-repeat;
 
-   @include media-query('lap-and-up'){margin-right: 30px;
-    height: 218px;
-   } /* !!!!!!!!!!!!! */
+  display: inline-block;
+  max-width: 100%;
+  @include media-query('lap-and-up'){
+    width: 30.7%;
+  }
+  img{
+    max-width: 98.5
+  }
 }
   .striscia::after {
     content:'';
@@ -78,19 +84,31 @@
   }
 .striscia1::after {
     background-image: url("../images/striscia-2.png");
-    @include media-query('lap-and-up'){ margin-top: -45px; }/* !!!!!!!!!!!!! */
+    margin-top: 1px;
+        padding-bottom: 10%;
+    height:auto;
+    @media(min-width:1077px){ margin-top: -45px; }/* !!!!!!!!!!!!! */
 }
 .striscia2::after {
     background-image: url("../images/striscia1.png");
     margin-top: -50px;
    @include media-query('lap-and-up'){ margin-top: -91px; /* !!!!!!!!!!!!! */}
 }
+.striscia3::after {
+    background-image: url("../images/divisori.png");
+  margin-top: -5%;
+position: relative;
+padding-bottom: 7.5%;
+height:0;
+}
 .forma::after {
+    height:0;
+    padding-bottom:6%;
     background-image: url("../images/forma.png");
-    margin-top: -27px; /* !!!!!!!!!!!!! */
-    @include media-query('lap-and-up'){
-    margin-top: -74px; /* !!!!!!!!!!!!! */
-    height: 86px; /* !!!!!!!!!!!!! */
+    margin-top: -8%; /* !!!!!!!!!!!!! */
+    @media(min-width:1293px){
+    margin-top: -6%; /* !!!!!!!!!!!!! */
+
     }
     z-index: 11;
 
@@ -142,34 +160,76 @@ overflow: hidden;
 @include font-size(14px);
 @include media-query(lap-and-up){
   @include font-size(16px);
+
 }
+@media(min-width: 1145px){  @include font-size(19px);}
 p{padding-top: 15px;}
- &>div{
+ &>*{
   vertical-align: top;
-  @include media-query(palm){padding:0 2%;}
-  @include media-query(lap-and-up){display:inline-block;}
+
+
  }
+ &>.chisiamo{
+    position: relative;
+    float:left;
+    width:100%;
+    @include media-query(palm){    margin-bottom: 4%;}
 
- & img{ max-width:200%}
+    @include media-query(lap-and-up){display:inline-block;margin-right: 1%;width: 50% !important;}
+     @media(min-width: 944px){float:none;vertical-align: bottom;}
+ }
+.chi-siamo-text{
+  padding: 0% 7%;
+  margin:0;
+  @include media-query(lap-and-up){display:inline; padding:0;width: 49% !important;}
+  @media(min-width: 944px){display:inline-block;}
+  @media(min-width: 1051px){padding: 5% 0;}
+}
+ .img-chi{
+  //padding-top: 18%;
+  width:100%;
+ }
+ .img-fascia{
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  display:none;
+  }
+ // & img{ max-width:200%}
 
+}
+.striscia3::after {
+    background-image: url("../images/divisori.png");
+
+position: relative;
+overflow:hidden;
+margin-top:0;
+@media(min-width: 1050px){  margin-top: -5%;}
 }
 .servizi{
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
   color:#fff;
-  @include media-query(lap-and-up){margin-top: -46px;} /* !!!!!!!!!!!!! */
+  @include media-query(lap-and-up){} /* !!!!!!!!!!!!! */
   & h3{
     font-family: "open_sansbold";
   }
 }
 .servizio{
   padding:20px 3%;
-  max-width: 100%;
-  @include font-size(13px);
+  width: 100%;
+  text-align: center;
+  @include font-size(16px);
   @include media-query(lap-and-up){
     padding:20px 2% 0;
     font-size:1em;
+
     line-height: 1.5;
+  }
+  @media(min-width:1293px){
+    display:inline-block;
+    width:33.33333%;
+    text-align: left;
   }
   @include media-query(palm){
     & h3 {
@@ -177,7 +237,7 @@ p{padding-top: 15px;}
     }
   }
 }
-@include media-query(lap-and-up){
+@media(min-width:1293px){
   .servizio-desc, .servizio-more {
       @include font-size(12px,1.5);
       font-weight: 600,
@@ -185,9 +245,9 @@ p{padding-top: 15px;}
 }
 .allestimenti{
   background-color:#A4C51A;
-      @include media-query(lap-and-up){margin-top: -20px; /* !!!!!!!!!!!!! */
-  padding-top: 98px; /* !!!!!!!!!!!!! */
-  padding-bottom: 32px; /* !!!!!!!!!!!!! */
+      @include media-query(lap-and-up){ /* !!!!!!!!!!!!! */
+  padding-top: 78px; /* !!!!!!!!!!!!! */
+ padding-bottom: 4%;/* !!!!!!!!!!!!! */
   }
 }
 
@@ -195,7 +255,7 @@ p{padding-top: 15px;}
  .servizio-desc{
   margin-top: 0.5rem; /* !!!!!!!!!!!!! */
     margin-bottom: 1rem;
-
+    @media(max-width: 1260px){padding: 0px 8%;}
   }
   .servizio-more{
     text-decoration: none;
@@ -209,18 +269,22 @@ p{padding-top: 15px;}
 
     position: relative;
   @include media-query(lap-and-up){
-    padding-bottom: 31px; /* !!!!!!!!!!!!! */
+    padding-bottom: 5%; /* !!!!!!!!!!!!! */
     padding-top: 90px; /* !!!!!!!!!!!!! */
     &>h3{margin-bottom:36px;}
-    .servizio-desc{
-      margin-top: 23.3%; /* !!!!!!!!!!!!! */
-    }
-    &>div>img{
+
+
+  }
+    @media(min-width:1293px){
+          &>div>img{
       position: absolute;
       top: 30%;
       right: 20px; /* !!!!!!!!!!!!! */
     }
-  }
+     .servizio-desc{
+      margin-top: 23.3%; /* !!!!!!!!!!!!! */
+    }
+    }
 }
 .lista-adulti {
 
@@ -250,6 +314,8 @@ padding-bottom: 0;
 padding-top: 78px; /* !!!!!!!!!!!!! */
 &>img{
   max-width: 107%;
+      margin-top: 10%;
+
 }
 }
 }
@@ -513,17 +579,27 @@ a[class^='bwg_back'],span[class^='bwg_title_spun2']{
   position: relative;
   left: 75%
 }
+.responsive-menu-wrapper{
+  position: fixed;
+width: 100%;
+background-color: rgb(190, 4, 17);
+text-align: center;
+top: 0px;
+padding-top: 10px;
+  display: none;
+  z-index: 9999;
+}
 #responsive-menu {
   position: absolute;
   width: 75%;
   left: -75%;
   top: 0px;
-  background: #43494C;
+  background: rgb(162, 71, 71);
   z-index: 9999;
   box-shadow: 0px 1px 8px #333333;
   font-size: 13px !important;
   max-width: 999px;
-  display: none
+
 }
 #responsive-menu.admin-bar-showing {
   padding-top: 32px
@@ -567,9 +643,9 @@ a[class^='bwg_back'],span[class^='bwg_title_spun2']{
 #responsive-menu #responsive-menu-title {
   width: 95% !important;
   font-size: 14px !important;
-  padding: 20px 0px 20px 5% !important;
+  padding: 20px 0px 12px 5% !important;
   margin-left: 0px !important;
-  background: #43494C !important;
+  background: rgb(190, 4, 17) !important;
   white-space: nowrap !important
 }
 #responsive-menu #responsive-menu-title,#responsive-menu #responsive-menu-title a {
@@ -600,7 +676,7 @@ a[class^='bwg_back'],span[class^='bwg_title_spun2']{
   background: #43494C !important;
   color: #FFFFFF !important
 }
-#responsive-menu.responsive-menu ul {
+#responsive-menu .responsive-menu ul {
   margin-left: 0px !important
 }
 #responsive-menu .responsive-menu li {
@@ -623,17 +699,15 @@ a[class^='bwg_back'],span[class^='bwg_title_spun2']{
   text-decoration: none !important
 }
 #click-menu {
-  text-align: center;
-  cursor: pointer;
-  font-size: 13px !important;
-  display: none;
-  position: absolute;
-  right: 5%;
-  top: 10px;
-  color: #FFFFFF;
-  background: #000000;
-  padding: 5px;
-  z-index: 9999
+text-align: center;
+cursor: pointer;
+font-size: 13px !important;
+color: #FFF;
+background: rgb(190, 4, 17);
+padding: 5px;
+z-index: 9999;
+position: relative;
+    display: inline-block;
 }
 #responsive-menu #responsiveSearch {
   display: block !important;
@@ -708,8 +782,17 @@ a[class^='bwg_back'],span[class^='bwg_title_spun2']{
 #click-menu .threeLines .line.last {
   margin-bottom: 0px !important
 }
-@media only screen and ( min-width : 0px ) and ( max-width : 800px ) {
-  #click-menu {
-    display: block
+
+@media(max-width:53.4em) {
+  .responsive-menu-wrapper {
+    display: inline-block;
   }
+  header.banner{
+    margin-top: 50px;
+  }
+}
+#wpadminbar{
+  position:fixed !important;
+  bottom: 0 !important;
+  top:auto !important;
 }

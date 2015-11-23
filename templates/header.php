@@ -39,7 +39,7 @@
 </div>
 <header class="banner striscia striscia1">
   <div class="header-wrapper">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"></a><div class="container">
+    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/logo.png'; ?>" alt=""></a><div class="container">
       <p class="claim" >Lo <span class="red">Spettacolo</span> non è mai stato <span class="red">così bello</span>!</p>
       <nav class="nav-primary">
         <ul class="list-inline">

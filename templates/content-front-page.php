@@ -6,11 +6,11 @@
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5&appId=1555133888082231";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<section id="chi-siamo" class="chi-siamo">
-  <div class="u-1/2-lap-and-up " >
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chisi.png';?>" alt="">
-  </div><div class="u-1/2-lap-and-up " >
-      <p>
+<section id="chi-siamo" class="chi-siamo striscia striscia3">
+  <div class="chisiamo" >
+      <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chisiamo.jpg'; ?>" alt="" class="img-chi">
+
+  </div><p class="chi-siamo-text">
         Nel 2009  <span class="green">Luca Sepe</span>, <span class="green">Ugo Cusati</span> e <span class="green">Marinella Ilari</span>, iniziano la loro collaborazione
         in occasione di alcuni Spettacoli in cui i tre svolgevano mansioni artistiche ed
         organizzative. Inizia, così, una proficua collaborazione che li portera' a  formare
@@ -30,10 +30,10 @@
         <br>
         È per tutto questo, e per molto altro, che c’è…<span class="red">MELARIDO</span>…
       </p>
-  </div>
+
 </section>
 <section id="servizi" class="servizi striscia forma">
-  <div class="servizio allestimenti u-1/3-lap-and-up inline-block" >
+  <div class="servizio allestimenti " >
     <h3>ALLESTIMENTI EVENTI
     <span class="text-moved" >E SERVICE AUDIO E LUCI</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/foto-allestimenti.png';?>" alt="esempi allestimenti">
@@ -43,7 +43,7 @@
     spazio e luogo.
     </p>
   <a href="<?php  $page = get_page_by_title( 'Service' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
-  </div><div class="servizio adulti u-1/3-lap-and-up inline-block" >
+  </div><div class="servizio adulti " >
     <h3>ANIMAZIONE ADULTI</h3>
     <div>
     <ul class="lista-adulti">
@@ -67,7 +67,7 @@ qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
     <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
-  </div><div class="servizio bambini u-1/3-lap-and-up inline-block" >
+  </div><div class="servizio bambini " >
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/bambini.png';?>" alt="esempi bambini">
