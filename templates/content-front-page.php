@@ -70,6 +70,11 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
   </div><div class="servizio bambini " >
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
+       <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
+qualsiasi tipologia di richiesta ed esigenza del cliente
+privato e non, ideali per stupire e deliziare adulti e bambini.
+    </p>
+    <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/bambini.png';?>" alt="esempi bambini">
   </div>
 </section>
@@ -175,7 +180,7 @@ Tel. 081 823 16 02 - 334 94 04 457 <br>
 www.melaridoeventi.com
     </p>
   </div><div class="form"><?php echo do_shortcode('[contact-form-7 id="4" title="Contatti"]' ); ?></div><div class="fb">
-    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
+    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
   </div>
   </div>
 </footer>

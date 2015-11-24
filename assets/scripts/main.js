@@ -90,6 +90,29 @@ $RMjQuery(document).ready(function() {
     $RMjQuery('.rm-append-inactive').siblings('ul').css('display', 'none')
 });
 })();
+	function matchH(){
+		var elements=$('.servizio.bambini img,.servizio.allestimenti img,.servizio.adulti>div');
+
+		var maxHeight = Math.max.apply(null, elements.map(function ()
+		{
+		    return $(this).height();
+		}).get());
+		
+
+		
+		elements.each(function(index, el) {
+			var h = (maxHeight - $(el).height())/2;
+			var servizio = $(el).closest('.servizio');			
+			var desc=servizio.find('.servizio-desc');
+			desc.css('marginTop',h);
+			desc.css('marginBottom',h);
+		});
+	}
+	matchH();
+	$(window).resize(function(event) {
+		matchH(); 
+	});
+	$('.servizio').matchHeight();
         var mySwiper;
         enquire.register("screen and (max-width:1010px)", {
 
