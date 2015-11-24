@@ -90,29 +90,42 @@ $RMjQuery(document).ready(function() {
     $RMjQuery('.rm-append-inactive').siblings('ul').css('display', 'none')
 });
 })();
-	function matchH(){
-		var elements=$('.servizio.bambini img,.servizio.allestimenti img,.servizio.adulti>div');
 
-		var maxHeight = Math.max.apply(null, elements.map(function ()
-		{
-		    return $(this).height();
-		}).get());
-		
+function matchH(){
+    var elements=$('.servizio.bambini img,.servizio.allestimenti img,.servizio.adulti>div');
 
-		
-		elements.each(function(index, el) {
-			var h = (maxHeight - $(el).height())/2;
-			var servizio = $(el).closest('.servizio');			
-			var desc=servizio.find('.servizio-desc');
-			desc.css('marginTop',h);
-			desc.css('marginBottom',h);
-		});
-	}
-	matchH();
-	$(window).resize(function(event) {
-		matchH(); 
-	});
-	$('.servizio').matchHeight();
+    var maxHeight = Math.max.apply(null, elements.map(function ()
+    {
+        return $(this).height();
+    }).get());
+
+
+
+    elements.each(function(index, el) {
+      var h = (maxHeight - $(el).height())/2;
+      var servizio = $(el).closest('.servizio');
+      var desc=servizio.find('.text-container');
+      desc.css('marginTop',h);
+      desc.css('marginBottom',h);
+    });
+  }
+  enquire.register("screen and (min-width:50em)", {
+
+    match : function() {
+
+  setTimeout(function(){matchH();$('.servizio').matchHeight();}, 500)
+  $(window).resize(matchH);
+
+    },      // OPTIONAL
+                                // If supplied, triggered when the media query transitions
+                                // *from an unmatched to a matched state*
+
+    unmatch : function() {
+      $('.servizio').matchHeight({ remove: true });
+      $(window).off("resize",matchH);
+    }
+  });
+
         var mySwiper;
         enquire.register("screen and (max-width:1010px)", {
 
@@ -167,6 +180,11 @@ $RMjQuery(document).ready(function() {
             // other options
         });
          $('.servizio-more').magnificPopup({
+
+            type: 'ajax'
+            // other options
+        });
+         $('.evento').magnificPopup({
 
             type: 'ajax'
             // other options

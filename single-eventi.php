@@ -1,5 +1,16 @@
-  <?=
-  "<div>
-    <h3>aaa</h3>
-  </div>"
-  ?>
+<?=
+'<div class="evento-single">
+  <h3>'.get_the_title().'</h3><h5>'?><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
+  echo $date->format('d-m-Y'); ?>
+  <?= '</h5><h5>'.get_field('luogo').'</h5>
+
+  <div class="content">
+<div class="img-cont">'.get_the_post_thumbnail().'  </div>
+    <p>'?><?php $content=get_the_content();if($content!==''){ echo $content;} else{echo
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+    }
+    echo'
+    </p>
+  </div>
+</div>';
+?>

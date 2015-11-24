@@ -1,9 +1,21 @@
 var gulp              = require('gulp')
   , $                 = require('gulp-load-plugins')({ camelize: true , DEBUG : true })
-  , config            = require('../gulpconfig').styles 
-  , enabled            = require('../gulpconfig').enabled
+  , config            = require('../gulpconfig').styles
+ , argv             = require('minimist')(process.argv.slice(2))
+  , enabled = {
+      // Enable static asset revisioning when `--production`
+      rev: argv.production,
+      // Disable source maps when `--production`
+      maps: !argv.production,
+      // Fail styles task on error when `--production`
+      failStyleTask: argv.production,
+      // Fail due to JSHint warnings only when `--production`
+      failJSHint: argv.production,
+      // Strip debug statments from javascript when `--production`
+      stripJSDebug: argv.production
+    }
   , writeToManifest   = require('./manifest').writeToManifest
-  , manifest          = require('../gulpconfig').manifest.manifest  
+  , manifest          = require('../gulpconfig').manifest.manifest
   , lazypipe          = require('lazypipe')
   , merge             = require('merge-stream')
   , browserSync       = require("browser-sync").get('My server')

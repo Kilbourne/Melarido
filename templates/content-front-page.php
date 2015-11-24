@@ -8,7 +8,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <section id="chi-siamo" class="chi-siamo striscia striscia3">
   <div class="chisiamo" >
-      <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chisiamo.jpg'; ?>" alt="" class="img-chi">
+      <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chi-siamo.jpg'; ?>" alt="" class="img-chi">
 
   </div><p class="chi-siamo-text">
         Nel 2009  <span class="green">Luca Sepe</span>, <span class="green">Ugo Cusati</span> e <span class="green">Marinella Ilari</span>, iniziano la loro collaborazione
@@ -37,12 +37,16 @@
     <h3>ALLESTIMENTI EVENTI
     <span class="text-moved" >E SERVICE AUDIO E LUCI</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/foto-allestimenti.png';?>" alt="esempi allestimenti">
+    <span class="text-container">
     <p class="servizio-desc">Disponiamo di Impianti audio professionali di vari marchi,
     potenza e tipologia affinchè sia possibile, attraverso la
     nostra consulenza, far fronte ad ogni tipo di esigenza di
     spazio e luogo.
     </p>
+
+
   <a href="<?php  $page = get_page_by_title( 'Service' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
+  </span>
   </div><div class="servizio adulti " >
     <h3>ANIMAZIONE ADULTI</h3>
     <div>
@@ -62,20 +66,25 @@
     </ul>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/adulti.png';?>" alt="Esempi Adulti">
     </div>
+    <span class="text-container">
     <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
 qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
     <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
+    </span>
   </div><div class="servizio bambini " >
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
+     <span class="text-container">
        <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
 qualsiasi tipologia di richiesta ed esigenza del cliente
 privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
     <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
+    </span>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/bambini.png';?>" alt="esempi bambini">
+
   </div>
 </section>
 
@@ -88,14 +97,14 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
   </div>
 </section>
 <section  class="radio-show">
-  <div class="u-1/3-lap-and-up  left" >
+  <div class="  left" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/direttamente-da-1.png';?>" alt="Direttamente da" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss">
     <p class="text-center">Tutto in una sera… Tutti insieme gli Artisti <br>
 più amati della radio<br>
 in uno spettacolo staffetta di oltre 3 ore,<br>
 con una scenografia sorprendente</p>
-  </div><div class="u-2/3-lap-and-up img-container striscia striscia2" >
+  </div><div class=" img-container striscia striscia2" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/radiocomdey.png';?>" alt="Radio Comedy Show">
   </div>
 
@@ -166,7 +175,7 @@ con una scenografia sorprendente</p>
 <section id="gallery" class="gallery">
   <h3 class="section-title">Gallery</h3>
   <div class="gallery-wrapper">
-    <?php echo photo_gallery(3); ?>
+    <?php echo photo_gallery(6); ?>
   </div>
 </section>
 <footer id="contatti" class="contatti">
