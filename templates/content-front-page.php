@@ -77,10 +77,7 @@ privato e non, ideali per stupire e deliziare adulti e bambini.
         <h3>FESTE PER BAMBINI &
     <span>ANIMAZIONE</span></h3>
      <span class="text-container">
-       <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
-qualsiasi tipologia di richiesta ed esigenza del cliente
-privato e non, ideali per stupire e deliziare adulti e bambini.
-    </p>
+       <p class="servizio-desc" >Disponiamo di giochi gonfiabili di piccole e grandi dimensioni, adatti a ludoteche, spazi interni ed esterni, piazze ed eventi pubblici e privati.</p>
     <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
     </span>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/bambini.png';?>" alt="esempi bambini">
