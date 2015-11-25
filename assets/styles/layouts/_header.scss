@@ -572,6 +572,10 @@ max-width: 50%;
     @include media-query(palm) {
         margin-bottom: 1.5rem;
     }
+            &>h4 {
+            font-size: 2.2rem;
+            margin-bottom: 0.7rem;
+        }
     &>.media__img {
         margin-right: 4%;
         @include media-query(palm) {
@@ -584,14 +588,12 @@ max-width: 50%;
         //@include media-query(lap-and-up){
         //padding: 0px 15% 0px 5%;
         //}
-        &>h4 {
-            font-size: 2.2rem;
-            margin-bottom: 0.7rem;
-        }
+
         &>p {
             font-size: 0.7rem;
             text-align: justify;
             word-wrap: break-word;
+            margin:0;
         }
         @include media-query(palm) {
             float: none;

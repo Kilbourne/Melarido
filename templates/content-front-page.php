@@ -148,13 +148,14 @@ con una scenografia sorprendente</p>
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
   <a href="<?php the_permalink(); ?>" class="ajax-popup-link evento media  u-1/2-lap-and-up swiper-slide">
+              <h4><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
+  echo $date->format('d-m-Y'); ?></h4>
+        <h4><?php the_field('luogo'); ?></h4>
       <div class="media__img">
         <?php  the_post_thumbnail(); ?>
       </div>
       <div class="media__body">
-        <h4><?php $date = DateTime::createFromFormat('Ymd', get_field('data'));
-  echo $date->format('d-m-Y'); ?></h4>
-        <h4><?php the_field('luogo'); ?></h4>
+
         <p><?php the_content();?></p>
       </div>
   </a>
@@ -169,12 +170,14 @@ con una scenografia sorprendente</p>
 
 
 </section>
+<!--
 <section id="gallery" class="gallery">
   <h3 class="section-title">Gallery</h3>
-  <div class="gallery-wrapper">
-    <?php echo photo_gallery(6); ?>
-  </div>
+  <div class="gallery-wrapper">-->
+
+  <!--</div>
 </section>
+-->
 <footer id="contatti" class="contatti">
   <div class="contatti-wrapper">
   <div class="info">
