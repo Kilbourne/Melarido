@@ -11,24 +11,17 @@
       <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/chi-siamo.jpg'; ?>" alt="" class="img-chi">
 
   </div><p class="chi-siamo-text">
-        Nel 2009  <span class="green">Luca Sepe</span>, <span class="green">Ugo Cusati</span> e <span class="green">Marinella Ilari</span>, iniziano la loro collaborazione
-        in occasione di alcuni Spettacoli in cui i tre svolgevano mansioni artistiche ed
-        organizzative. Inizia, così, una proficua collaborazione che li portera' a  formare
-        una società…la MELARIDO.
+        Nel 2009  <span class="green">Luca Sepe</span>, <span class="green">Ugo Cusati</span> e <span class="green">Marinella Ilari</span>, iniziano la loro collaborazione in occasione di alcuni spettacoli in cui i tre svolgevano mansioni artistiche e organizzative. Era solo l'inizio di una proficua collaborazione che, dopo qualche anno, li porterà a formare una società vera e propria... la MELARIDO!
         <br>
-        L’esperienza diretta del campo ha portato i tre a concepire un’agenzia di
-        organizzazione di eventi d’ogni genere, basata sulla soddisfazione dei propri clienti,
-        seguendoli minuziosamente dalla fase di programmazione al momento
-        dell’evento stesso.
+        L'esperienza maturata sul campo ha permesso ai tre di concepire un'agenzia in grado di organizzare eventi d'ogni genere il cui obiettivo è sempre e solo la soddisfazione dei propri clienti, minuziosamente seguiti dalla fase di programmazione fino all’evento stesso.
+
         <br>
-        è per questo che le feste per adulti e bambini, gli eventi nei  locali e nelle piazze,
-        le cerimonie di tutti i tipi, acquistano una luce diversa con <span class="red">MELARIDO</span>.
+        È per questo che le feste per adulti e bambini, gli eventi nei locali e nelle piazze, le cerimonie di tutti i tipi, acquistano una luce diversa con <span class="red">MELARIDO</span>.
         <br>
-        La <span class="red">MELARIDO</span> si completa con il supporto attivo  dell’emittente radiofonica
-        <span class="green">KISS KISS NAPOLI</span>, che consente in maniera esclusiva di promozionare gli eventi,
-        laddove richiesto, con un potere mediatico senza paragoni.
+        <span class="red">MELARIDO</span> si completa con il supporto attivo  dell’emittente radiofonica
+        <span class="green">KISS KISS NAPOLI</span>, che consente in maniera esclusiva di promozionare gli eventi, laddove richiesto, con un potere mediatico senza paragoni.
         <br>
-        È per tutto questo, e per molto altro, che c’è…<span class="red">MELARIDO</span>…
+        È per tutto questo, e per molto altro, che c’è…<span class="red">MELARIDO</span>!
       </p>
 
 </section>
@@ -38,10 +31,7 @@
     <span class="text-moved" >E SERVICE AUDIO E LUCI</span></h3>
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/foto-allestimenti.png';?>" alt="esempi allestimenti">
     <span class="text-container">
-    <p class="servizio-desc">Disponiamo di Impianti audio professionali di vari marchi,
-    potenza e tipologia affinchè sia possibile, attraverso la
-    nostra consulenza, far fronte ad ogni tipo di esigenza di
-    spazio e luogo.
+    <p class="servizio-desc">Disponiamo di impianti audio professionali di vari marchi, potenza e tipologia. Con il nostro supporto, la nostra consulenza, sarà a possibile far fronte ad ogni tipo di esigenza di spazio e luogo.
     </p>
 
 
@@ -67,9 +57,7 @@
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/adulti.png';?>" alt="Esempi Adulti">
     </div>
     <span class="text-container">
-    <p class="servizio-desc" >Disponiamo di Carrettini professionali per soddisfare
-qualsiasi tipologia di richiesta ed esigenza del cliente
-privato e non, ideali per stupire e deliziare adulti e bambini.
+    <p class="servizio-desc" >Disponiamo di carrettini professionali per soddisfare qualsiasi tipologia di richiesta ed esigenza del cliente privato e non, ideali per stupire e deliziare adulti e bambini.
     </p>
     <a href="<?php  $page = get_page_by_title( 'Animazione Adulti' ); echo get_page_link ( $page -> ID); ?>" title="" class="servizio-more" >Leggi Tutto.</a>
     </span>
