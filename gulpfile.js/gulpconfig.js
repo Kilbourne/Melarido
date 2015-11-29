@@ -1,4 +1,5 @@
 var   argv             = require('minimist')(process.argv.slice(2))
+	, devUrl		   = require('./devUrl')
 	, manifestSrc      = './assets/manifest.json'
 	, enabled = {
 		  // Enable static asset revisioning when `--production`
@@ -56,7 +57,7 @@ module.exports = {
 	  enabled 	  : enabled
 	, browsersync : {
 	      files: ['{lib,templates}/**/*.php', '*.php'],
-	      proxy: config.devUrl,
+	      proxy: devUrl,
 	      snippetOptions: {
 	      	whitelist: ['/wp-admin/admin-ajax.php'],
 	      	blacklist: ['/wp-admin/**']
