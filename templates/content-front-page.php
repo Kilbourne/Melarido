@@ -104,7 +104,7 @@ con una scenografia sorprendente</p>
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
-  <div class=""><a href="<?php echo get_the_permalink(); ?>" class="ajax-popup-link" ><?php the_post_thumbnail(); ?></a></div>
+  <div class=""><!-- <a href="<?php //echo get_the_permalink(); ?>" class="ajax-popup-link" > --> <?php the_post_thumbnail(); ?> <!-- </a> --> </div>
  <?php endwhile; ?>
 
     </div>
@@ -115,10 +115,7 @@ con una scenografia sorprendente</p>
 
 
 </section>
-<section id="eventi" class="eventi">
-  <h3 class="section-title">Eventi</h3>
-    <div class="eventi-wrapper">
-  <div class="lista-eventi swiper-wrapper ">
+
   <?php
     $today = date('Ymd');
     $args = array( 'post_type' => 'eventi', 'posts_per_page' => -1,
@@ -132,7 +129,14 @@ con una scenografia sorprendente</p>
           'value'   => $today,
       )
       ));
+
     $loop = new WP_Query( $args );
+    if($loop->have_posts()){ ?>
+    <section id="eventi" class="eventi">
+  <h3 class="section-title">Eventi</h3>
+    <div class="eventi-wrapper">
+  <div class="lista-eventi swiper-wrapper ">
+<?php    
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
   <a href="<?php the_permalink(); ?>" class="ajax-popup-link evento media  u-1/2-lap-and-up swiper-slide">
@@ -144,7 +148,7 @@ con una scenografia sorprendente</p>
       </div>
       <div class="media__body">
 
-        <p><?php the_content();?></p>
+        <?php the_content();?>
       </div>
   </a>
  <?php endwhile; ?>
@@ -158,6 +162,7 @@ con una scenografia sorprendente</p>
 
 
 </section>
+<?php } ?>
 <!--
 <section id="gallery" class="gallery">
   <h3 class="section-title">Gallery</h3>
