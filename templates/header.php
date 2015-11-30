@@ -14,7 +14,24 @@
           <li class="active"><a href="#chi-siamo" title="">Chi Siamo</a></li>
           <li><a href="#servizi" title="">Servizi</a></li>
           <li><a href="#artisti" title="">Artisti</a></li>
+            <?php
+    $today = date('Ymd');
+    $args = array( 'post_type' => 'eventi', 'posts_per_page' => -1,
+          'meta_key' => 'data', // name of custom field
+  'orderby' => 'meta_value_num',
+  'order' => 'ASC',
+   'meta_query' => array(
+    array(
+          'key'   => 'data',
+          'compare' => '>=',
+          'value'   => $today,
+      )
+      ));
+
+    $loop = new WP_Query( $args );
+    if($loop->have_posts()){ ?>
           <li><a href="#eventi" title="">Eventi</a></li>
+          <?php } ?>
           <!--
           <li><a href="#gallery" title="">Gallery</a></li>
           -->
@@ -48,7 +65,24 @@
           <li class="active"><a href="#chi-siamo" title="">Chi Siamo</a></li>
           <li><a href="#servizi" title="">Servizi</a></li>
           <li><a href="#artisti" title="">Artisti</a></li>
+                      <?php
+    $today = date('Ymd');
+    $args = array( 'post_type' => 'eventi', 'posts_per_page' => -1,
+          'meta_key' => 'data', // name of custom field
+  'orderby' => 'meta_value_num',
+  'order' => 'ASC',
+   'meta_query' => array(
+    array(
+          'key'   => 'data',
+          'compare' => '>=',
+          'value'   => $today,
+      )
+      ));
+
+    $loop = new WP_Query( $args );
+    if($loop->have_posts()){ ?>
           <li><a href="#eventi" title="">Eventi</a></li>
+          <?php } ?>
           <!--<li><a href="#gallery" title="">Gallery</a></li> -->
           <li><a href="#contatti" title="">Contatti</a></li>
         </ul>

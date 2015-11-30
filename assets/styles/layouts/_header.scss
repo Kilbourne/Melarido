@@ -602,7 +602,9 @@ max-width: 50%;
         }
     }
 }
-
+.single-event .evento{
+  width :auto !important;
+}
 .contatti {
     padding: 0 2% 2%;
     text-align: center;

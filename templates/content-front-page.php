@@ -18,11 +18,16 @@
         <br>
         È per questo che le feste per adulti e bambini, gli eventi nei locali e nelle piazze, le cerimonie di tutti i tipi, acquistano una luce diversa con <span class="red">MELARIDO</span>.
         <br>
-        <span class="red">MELARIDO</span> si completa con il supporto attivo  dell’emittente radiofonica
+        <span class="red">MELARIDO</span> si completa con il supporto attivo dell’emittente radiofonica
         <span class="green">KISS KISS NAPOLI</span>, che consente in maniera esclusiva di promozionare gli eventi, laddove richiesto, con un potere mediatico senza paragoni.
         <br>
         È per tutto questo, e per molto altro, che c’è…<span class="red">MELARIDO</span>!
       </p>
+
+
+
+
+
 
 </section>
 <section id="servizi" class="servizi striscia forma">
@@ -135,8 +140,8 @@ con una scenografia sorprendente</p>
     <section id="eventi" class="eventi">
   <h3 class="section-title">Eventi</h3>
     <div class="eventi-wrapper">
-  <div class="lista-eventi swiper-wrapper ">
-<?php    
+  <div class="lista-eventi swiper-wrapper <?php if($loop->post_count===1){ echo "single-event";} ?> ">
+<?php
     while ( $loop->have_posts() ) : $loop->the_post();
   ?>
   <a href="<?php the_permalink(); ?>" class="ajax-popup-link evento media  u-1/2-lap-and-up swiper-slide">
