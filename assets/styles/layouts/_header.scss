@@ -126,7 +126,7 @@
     background-image: url("../images/divisori-multi.png");
     margin-top: -5%;
     position: relative;
-    padding-bottom: 7.5%;
+    padding-bottom: 8.2%;
     height: 0;
 }
 
@@ -183,11 +183,11 @@
         }
     }
     /* !!!!!!!!!!!!! */
-    .left>img {
+    .left>img,.left>a>img {
         display: block;
         margin: 0 auto
     }
-    .left>.kisskiss {
+    .left .kisskiss {
         margin: 20px auto;
         max-width: 45%;
     }
@@ -304,7 +304,7 @@
 
     @media(min-width:50em) {
         display: inline-block;
-        width: 33.33333%;
+        width: 33.4%;
         text-align: left;
     }
     @media(min-width:50em) and (max-width:62.75em){
@@ -460,6 +460,9 @@ max-width: 50%;
     }
     @media(min-width:50em) and (max-width:60em){
            padding-top: 40px;
+    }
+     @media(min-width:50em) {
+        width: 33.2% !important;
     }
 }
 

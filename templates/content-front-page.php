@@ -89,7 +89,7 @@
 <section  class="radio-show">
   <div class="  left" >
     <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/direttamente-da-1.png';?>" alt="Direttamente da" >
-    <img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss">
+    <a href="http://www.kisskissnapoli.it" title="" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/dist/images/kisskiss.svg';?>" alt="Radio KissKiss" class="kisskiss"></a>
     <p class="text-center">Tutto in una sera… Tutti insieme gli Artisti <br>
 più amati della radio<br>
 in uno spettacolo staffetta di oltre 3 ore,<br>
@@ -187,7 +187,8 @@ Tel. 081 823 16 02 - 334 94 04 457 <br>
 www.melaridoeventi.com
     </p>
   </div><div class="form"><?php echo do_shortcode('[contact-form-7 id="4" title="Contatti"]' ); ?></div><div class="fb">
-    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
+    <h3>Seguici su Facebook:</h3>
+    <div class="fb-page" data-href="https://www.facebook.com/melarido.srls/" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/melarido.srls/"><a href="https://www.facebook.com/melarido.srls/">Melarido srls</a></blockquote></div></div>
   </div>
   </div>
 </footer>
